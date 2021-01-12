@@ -37,19 +37,19 @@ namespace DemoEFCoreApp
                 db.Users.Add(user1);
                 db.Users.Add(user2);
                 db.SaveChanges();
-            }
+            //}
 
-            //// получение
+            ////// получение
             //using (ApplicationContext db = new ApplicationContext())
             //{
-            //    // получаем объекты из бд и выводим на консоль
-            //    var users = db.Users.ToList();
-            //    Console.WriteLine("Данные после добавления:");
-            //    foreach (User u in users)
-            //    {
-            //        Console.WriteLine($"{u.Id}.{u.Name} - {u.Age}");
-            //    }
-            //}
+                // получаем объекты из бд и выводим на консоль
+                var users = db.Users.ToList();
+                Console.WriteLine("Данные после добавления:");
+                foreach (User u in users)
+                {
+                    Console.WriteLine($"{u.Id}.{u.Name} - {u.Age}");
+                }
+            }
 
             //// Редактирование
             //using (ApplicationContext db = new ApplicationContext())

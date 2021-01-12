@@ -14,13 +14,13 @@ namespace DemoEFCoreApp.Data
 
         public ApplicationContext()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = demodb.sqlite");
-            optionsBuilder.LogTo(System.Console.WriteLine, LogLevel.Information);
+            //optionsBuilder.LogTo(System.Console.WriteLine, LogLevel.Information);
         }
 
     }
